@@ -1,0 +1,6 @@
+body { font: 13px Tahoma, Verdana, sans-serif; margin: 12px; background: #eef1f4; }
+#banner { background: #1d3557; color: #fff; padding: 4px 8px; font-weight: bold; }
+h1 { font-size: 16px; margin: 10px 0; }
+table.keyed th { text-align: right; font-weight: normal; padding: 3px 8px; vertical-align: top; }
+table.keyed td { padding: 3px 0; }
+textarea { font-family: Consolas, monospace; font-size: 12px; }

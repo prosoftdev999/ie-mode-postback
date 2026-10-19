@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Amend entry</title>
+<link rel="stylesheet" type="text/css" href="css/desk.css" />
+<script type="text/javascript" src="js/branding.js"></script>
+<!--[if lt IE 8]><script type="text/javascript" src="js/json2.js"></script><![endif]-->
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript" src="js/rates.js"></script>
+<script type="text/javascript" src="js/entry.js"></script>
+</head>
+<body onload="CV.banner()">
+<div id="banner"></div>
+<h1>Amend entry</h1>
+<form id="entry" method="post" action="http://gateway.desk.local/entries/amend" onsubmit="return CV.entry.submit(this, 'AM');">
+<div id="checks" class="summary">Check before lodging: <a href="#txtWeight">gross weight</a> | <a href="#txtpkgs">packages</a></div>
+<table class="keyed">
+<tr><th><label for="txtRef">Our reference</label></th><td><input type="text" id="txtRef" size="40" /></td></tr>
+<tr><th><label for="txtParty">Importer</label></th><td><input type="text" id="txtParty" size="40" /></td></tr>
+<tr><th><label for="txaAddr">Importer address</label></th><td><textarea id="txaAddr" rows="4" cols="70"></textarea></td></tr>
+<tr><th><label for="txtInvDate">Invoice date</label></th><td><input type="text" id="txtInvDate" size="40" /></td></tr>
+<tr><th><label for="txtArrDate">Arrival date</label></th><td><input type="text" id="txtArrDate" size="40" /></td></tr>
+<tr><th><label for="selCurrency">Invoice currency</label></th><td><select id="selCurrency"><option value="USD">USD</option><option value="EUR">EUR</option><option value="GBP">GBP</option><option value="CAD">CAD</option><option value="CNY">CNY</option><option value="JPY">JPY</option><option value="MXN">MXN</option></select></td></tr>
+<tr><th><label for="txtFreight">Freight (invoice currency)</label></th><td><input type="text" id="txtFreight" size="40" /></td></tr>
+<tr><th><a name="txtWeight"></a><label for="txtWeight">Gross weight</label></th><td><input type="text" id="txtWeight" size="40" /></td></tr>
+<tr><th><a name="txtpkgs"></a><label for="txtPkgs">Packages</label></th><td><input type="text" id="txtPkgs" size="40" /></td></tr>
+<tr><th><label for="txtCntrs">Container numbers</label></th><td><input type="text" id="txtCntrs" size="40" /></td></tr>
+<tr><th><label for="txaLines">Invoice lines (paste from the invoice sheet)</label></th><td><textarea id="txaLines" rows="8" cols="70"></textarea></td></tr>
+</table>
+<div class="posted">
+<input type="hidden" name="ref" value="" />
+<input type="hidden" name="ref_seq" value="" />
+<input type="hidden" name="party" value="" />
+<input type="hidden" name="addr1" value="" />
+<input type="hidden" name="addr2" value="" />
+<input type="hidden" name="addr3" value="" />
+<input type="hidden" name="inv_date" value="" />
+<input type="hidden" name="arr_date" value="" />
+<input type="hidden" name="transit_days" value="" />
+<input type="hidden" name="fx_rate" value="" />
+<input type="hidden" name="goods_fc" value="" />
+<input type="hidden" name="goods_usd" value="" />
+<input type="hidden" name="freight_usd" value="" />
+<input type="hidden" name="cif_usd" value="" />
+<input type="hidden" name="duty_usd" value="" />
+<input type="hidden" name="gross_kg" value="" />
+<input type="hidden" name="pkgs" value="" />
+<input type="hidden" name="kg_text" value="" />
+<input type="hidden" name="cntrs" value="" />
+<input type="hidden" name="cntr_check" value="" />
+<input type="hidden" name="line_count" value="" />
+<input type="hidden" name="lines_json" value="" />
+<input type="hidden" name="l1_hs" value="" />
+<input type="hidden" name="l1_desc" value="" />
+<input type="hidden" name="l1_qty" value="" />
+<input type="hidden" name="l1_value" value="" />
+<input type="hidden" name="l1_duty" value="" />
+<input type="hidden" name="l2_hs" value="" />
+<input type="hidden" name="l2_desc" value="" />
+<input type="hidden" name="l2_qty" value="" />
+<input type="hidden" name="l2_value" value="" />
+<input type="hidden" name="l2_duty" value="" />
+<input type="hidden" name="l3_hs" value="" />
+<input type="hidden" name="l3_desc" value="" />
+<input type="hidden" name="l3_qty" value="" />
+<input type="hidden" name="l3_value" value="" />
+<input type="hidden" name="l3_duty" value="" />
+<input type="hidden" name="l4_hs" value="" />
+<input type="hidden" name="l4_desc" value="" />
+<input type="hidden" name="l4_qty" value="" />
+<input type="hidden" name="l4_value" value="" />
+<input type="hidden" name="l4_duty" value="" />
+<input type="hidden" name="l5_hs" value="" />
+<input type="hidden" name="l5_desc" value="" />
+<input type="hidden" name="l5_qty" value="" />
+<input type="hidden" name="l5_value" value="" />
+<input type="hidden" name="l5_duty" value="" />
+<input type="hidden" name="l6_hs" value="" />
+<input type="hidden" name="l6_desc" value="" />
+<input type="hidden" name="l6_qty" value="" />
+<input type="hidden" name="l6_value" value="" />
+<input type="hidden" name="l6_duty" value="" />
+<input type="hidden" name="inv_year" value="" />
+<input type="hidden" name="arr_long" value="" />
+<textarea name="addr_block" rows="3" cols="40" style="display:none"></textarea>
+<input type="hidden" name="docket" value="" />
+</div>
+<p><input type="submit" id="go" value="Lodge entry" /></p>
+</form>
+</body>
+</html>
